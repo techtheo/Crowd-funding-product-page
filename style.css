@@ -1,0 +1,761 @@
+:root {
+    /* primary */
+    --moderate-cyan: hsl(176, 50%, 47%);
+    --dark-cyan: hsl(176, 72%, 28%);
+    /* neutral */
+    --black: hsl(0, 0%, 0%);
+    --dark-gray: hsl(0, 0%, 48%);
+}
+
+/* css reset */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+/*  */
+
+
+body {
+    font-family: 'Commissioner', sans-serif;
+}
+
+
+
+header {
+    background-image: url(images/image-hero-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 25rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.desktop-nav {
+    display: none;
+}
+
+.mobile-nav {
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+    z-index: 10;
+}
+
+.mobile-nav-flex {
+    padding: 0;
+    display: flex;
+    background-color: white;
+    margin: 1.5rem;
+    flex-direction: column;
+    align-items: baseline;
+    border-radius: .5rem;
+}
+
+.open-menu-icon-nav, .close-menu-icon-nav {
+    cursor: pointer;
+}
+
+.close-menu-icon-nav {
+    z-index: 10;
+}
+
+.mobile-nav a {
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.mobile-nav hr {
+    width: 100%;
+    opacity: .5;
+}
+
+main {
+    margin: 1.5rem;
+    margin-top: -8.5rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.mastercraft-logo {
+    margin: auto;
+    margin-top: -2.7rem;
+    padding-bottom: 2rem;
+}
+
+.product-title {
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.product-title h2 {
+    line-height: 1.8rem;
+    padding-bottom: 1rem;
+}
+
+.product-title p {
+    color: var(--dark-gray);
+    padding-bottom: 1.5rem;
+}
+
+.product-title-flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn {
+    border-radius: 2rem;
+    border: 0;
+    color: white;
+    background-color: var(--moderate-cyan);
+    height: 3.3rem;
+    /* margin-right: -4rem; */
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #157a74;
+}
+
+.back-this-project-btn {
+    width: 60%;
+}
+
+.bookmark-span {
+    color: var(--dark-gray);
+    font-weight: 500;
+    display: none;
+}
+
+.bookmark-icon {
+    height: 3.3rem;
+    width: 3.4rem;
+    cursor: pointer;
+}
+
+.bookmarked {
+    color: var(--dark-cyan);
+}
+
+.product-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6rem;
+}
+
+.product-back-stats-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-back-stats-stat strong {
+    padding-top: 1rem;
+    font-size: 2rem;
+}
+
+.product-back-stats-stat span {
+    color: var(--dark-gray);
+    font-size: .8rem;
+    padding-bottom: 1rem;
+}
+
+.progress-bar-container {
+    margin-top: 1rem;
+    width: 100%;
+    height: 1rem;
+    background-color: rgb(212, 212, 212);
+    align-self: flex-start;
+    border-radius: 1rem;
+}
+
+.progress-bar {
+    margin-top: .1rem;
+    margin-left: .1rem;
+    background-color: var(--moderate-cyan);
+    height: .8rem;
+    width: 70%;
+    align-self: start;
+    border-radius: 1rem;
+}
+
+.about-project h3 {
+    font-size: 1.3rem;
+    padding-bottom: 1.5rem;
+}
+
+.about-project p {
+    color: var(--dark-gray);
+    font-size: .98rem;
+    padding-bottom: 2rem;
+}
+
+.select-pledges {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 6rem;
+}
+
+.pledge-option {
+    border-radius: .5rem;
+    border: 1px solid hsla(0, 0%, 48%, 0.452);
+    padding: 1.5rem;
+}
+
+.pledge-option-top-flex {
+    padding-bottom: 1rem;
+}
+
+.pledge-option-top-flex h4 {
+    font-size: .95rem;
+}
+
+.pledge-span {
+    color: var(--moderate-cyan);
+    font-size: .93rem;
+}
+
+.pledge-option-description {
+    color: var(--dark-gray);
+    font-size: .94rem;
+    padding-bottom: 1.5rem;
+}
+
+.pledge-option-bottom-flex-left {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-bottom: 1.2rem;
+}
+
+.pledge-option-bottom-flex {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding-bottom: 1.2rem;
+}
+
+.pledge-option-left {
+    font-size: 2rem;
+}
+
+.pledge-option-left span {
+    color: var(--dark-gray);
+    font-size: .7rem;
+}
+
+.select-reward-btn {
+    width: 60%;
+    height: 2.7rem;
+    font-size: .9rem;
+    margin-top: -.7rem;
+    margin-left: .5rem;
+}
+
+.out-of-stock-option {
+    opacity: .5;
+}
+
+.out-of-stock-btn {
+    background-color: var(--dark-gray);
+}
+
+.selection-modal {
+    position: absolute;
+    top: 0;
+    margin: 7rem 2rem;
+    padding: 2rem 1.5rem;
+    border-radius: .5rem;
+    background-color: white;
+    z-index: 10;
+}
+
+.selection-modal-top-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+}
+
+.selection-modal p {
+    color: var(--dark-gray);
+    font-size: .95rem;
+}
+
+.selection-modal-option-p {
+    margin-bottom: 3rem;
+}
+
+.pledge-item-name, .span-pledge {
+    font-size: .92rem;
+}
+
+.hr-pledge {
+    display: none;
+}
+
+.span-pledge {
+    color: var(--moderate-cyan);
+    font-weight: 500;
+}
+
+.selection-modal-option-top-div-items-left strong {
+    font-size: 1.2rem;
+    padding-right: .4rem;
+}
+
+.selection-modal-option-top-div-items-left span {
+    color: var(--dark-gray);
+}
+
+.selection-modal-options-container {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.selection-modal-option {
+    padding: 1.4rem;
+    border: 1px solid #d4d4d4;
+    border-radius: .4rem;
+}
+
+.selection-modal-option-selected {
+    border: 1px solid var(--moderate-cyan);
+    outline: 1px solid var(--moderate-cyan);
+}
+
+.selection-modal-option p {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.selection-modal-option-top-div {
+    display: flex;
+    gap: 1rem;
+}
+
+.selected-pledge {
+    padding-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.selected-pledge span {
+    align-self: center;
+    font-size: .91rem;
+    color: var(--dark-gray);
+}
+
+.selected-pledge-flex {
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.selected-pledge-btn {
+    width: 50%;
+    height: 2.8rem;
+}
+
+.selected-pledge-input {
+    padding-left: 2.5rem;
+    width: 39%;
+    height: 2.8rem;
+    border-radius: 2rem;
+    border: 1px solid #d4d4d4;
+}
+
+.dollar-span {
+    position: relative;
+    left: 3rem;
+    top: 1px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.close-icon-selection-modal {
+    filter: invert(69%) sepia(0%) saturate(0%) hue-rotate(38deg) brightness(192%) contrast(88%);
+    cursor: pointer;
+}
+
+.selected {
+    border: 1px solid var(--moderate-cyan);
+}
+
+.dark-background {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.disabled-radio {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.no-reward-pledge-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.no-reward-pledge-continue-btn {
+    align-self: center;
+}
+
+.out-of-stock-btn {
+    background-color: var(--dark-gray);
+    cursor: initial;
+}
+
+.out-of-stock-btn:hover {
+    background-color: var(--dark-gray);
+}
+
+.error-border {
+    outline: 1px solid red;
+}
+
+.success-modal {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: white;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    z-index: 10;
+}
+
+.success-modal p {
+    color: var(--dark-gray);
+    font-size: .95rem;
+}
+
+.success-modal button {
+    margin-top: 1rem;
+    width: 40%;
+    height: 2.7rem;
+}
+
+.pledge-item-name {
+    cursor: pointer;
+}
+
+.pledge-item-name:hover {
+    color: var(--moderate-cyan);
+}
+
+.items-left-desktop {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+@media (min-width: 900px) {
+    header {
+        background-image: url(images/image-hero-desktop.jpg);
+        background-repeat: no-repeat;
+        background-position: initial;
+        height: 25rem;
+    }
+    
+    nav {
+        padding: 2rem 7rem;
+    }
+    
+    .desktop-nav {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .desktop-nav a {
+        color: white;
+        cursor: pointer;
+    }
+
+    .open-menu-icon-nav, .close-menu-icon-nav {
+        display: none;
+    }
+    
+    main {
+        margin: 1.5rem;
+        margin-top: -8.5rem;
+        background-color: white;
+        padding: 1rem;
+        width: 50%;
+        border-radius: .5rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    br {
+        display: none;
+    }
+
+    .mastercraft-logo {
+        padding-bottom: 1.5rem;
+    }
+
+    .product-title h2 {
+        line-height: 1.8rem;
+        padding-bottom: 1rem;
+        font-size: 1.7rem;
+    }
+    
+    .product-title-flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+    
+    .back-this-project-btn {
+        width: 30%;
+    }
+    
+    .product-title-bookmark-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .bookmark-span {
+        display: block;
+        font-size: .95rem;
+    }
+    
+    .product-stats {
+        display: flex;
+        flex-direction: column;
+        align-items: initial;
+        padding: 0 10rem 6rem 2rem;
+    }
+    
+    .product-back-stats {
+        display: flex;
+        justify-content: space-between;
+        gap: 2.7rem;
+    }
+
+    hr {
+        height: 3.6rem;
+        margin-top: 1.6rem;
+        opacity: .4;
+    }
+
+    .about-project {
+        padding: 0 2rem;
+        padding-bottom: 3rem;
+    }
+
+    .select-pledges {
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding-bottom: 6rem;
+    }
+    
+    .pledge-option {
+        border-radius: .5rem;
+        border: 1px solid hsla(0, 0%, 48%, 0.452);
+        padding: 1.5rem;
+    }
+    
+    .pledge-option-top-flex {
+        padding-bottom: 1rem;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .pledge-option-bottom-flex {
+        justify-content: space-between;
+    }
+    
+    .select-reward-btn {
+        width: 30%;
+    }
+    
+    .selection-modal {
+        top: 12rem;
+        margin: initial;
+        width: 45%;
+
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+    
+    .pledge-description-p {
+        text-align: initial;
+        padding-left: 2.8rem;
+    }
+    
+    .pledge-flex {
+        align-items: center;
+    }
+
+    .items-left-desktop {
+        display: block;
+        align-self: flex-end;
+    }
+    
+    .items-left-mobile {
+        display: none;
+    }
+
+    .selection-modal-option-top-div {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    .selected-pledge {
+        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .selected-pledge-flex {
+        justify-content: initial;
+        gap: 1rem;
+        margin-right: -2rem;
+    }
+    
+    .selected-pledge-input {
+        padding-left: 2.5rem;
+        width: 35%;
+        height: 2.8rem;
+        border-radius: 2rem;
+        border: 1px solid #d4d4d4;
+    }
+    
+    .selected-pledge-btn {
+        padding-right: 0;
+        width: 35%;
+    }
+
+    .selected-pledge {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .enter-your-pledge-span {
+        padding-top: 1rem;
+    }
+
+    .success-modal {
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+        top: 15rem;
+        text-align: center;
+        width: 35%;
+    }
+
+    .success-modal button {
+        margin-right: 0;
+        width: 20%;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .pledge-flex {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .pledge-item-name {
+        cursor: pointer;
+    }
+
+    .pledge-item-name:hover {
+        color: var(--moderate-cyan);
+    }
+
+    .hr-pledge {
+        display: block;
+        height: 0;
+        width: 107%;
+        margin-left: -1.3rem;
+    }
+
+    .desktop-nav a:hover {
+        text-decoration: underline;
+        text-decoration-color: #c5c5c5cb;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
